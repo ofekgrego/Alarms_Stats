@@ -1,5 +1,7 @@
 from AlarmClass import Alarm
 from SaveData import GetData
+from SaveData import printAlertPerData
+from SaveData import printAlertPerDataForDrive
 
 def getAlertPerPlace():
     Data = GetData()
@@ -19,16 +21,10 @@ def getAlertPerPlace():
     return AlertPerPlace
 
 
-def printAlertPerPlace():
-    Data = getAlertPerPlace()
-
-    for i in Data:
-        print(i + " - " + str(Data[i]))
-
 
 def getCountOfAllPlaces():
     return(len(getAlertPerPlace()))
 
 
 
-printAlertPerPlace()
+printAlertPerDataForDrive(getAlertPerPlace())

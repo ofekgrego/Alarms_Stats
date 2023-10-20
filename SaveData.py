@@ -24,3 +24,16 @@ def GetData():
 
     return MainData
     
+def printAlertPerData(Data):
+    for i in Data:
+        print(i + " - " + str(Data[i]))
+
+def printAlertPerDataForDrive(Data):
+    for i in Data:
+        print(i)
+
+    print()
+    print()
+
+    for i in Data:
+        print(str(Data[i]))
